@@ -68,9 +68,5 @@ Here's your first chance to practice this:
 
 What is your favorite emoji?  (Check out this [emoji cheat sheet](http://www.emoji-cheat-sheet.com/).)
 
-<<<<<<< HEAD
->> :smiley:
-=======
 >> :stuck_out_tongue_closed_eyes:
-
->>>>>>> 6e026bcbaaabb2ae4187cae62006e95448564bb5
+:smiley:
