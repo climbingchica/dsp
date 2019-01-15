@@ -53,11 +53,59 @@ rm -r directory_name/  -r modifies behavior of rm command, "recursive" removes d
 rm -rf 
 
 Redirection
+>      redirects standard output of a command to a file, overwriting previous content.
+>>     redirects standard output of a command to a file, appending new content to old content.
+<      redirects standard input to a command.
+|      redirects standard output of a command to another command.
+
 cat oceans.txt > continents.txt  takes output to left of '>', redirects it to the file on the right
                >>                appends the data instead of replacing it
 sort lakes.txt    orders in alphabetical order
 uniq deserts.txt  filters out duplicate lines
 
+Grep
+grep  Mount mountains.txt     "global regular expression print"
+grep -i                       makes it case-insensitive
+grep -R Mount /directory      "R" for recursive, searches for string "Mount" outputs filenames and lines with matched results
+grep -Rl Mount /directory     outputs only filenames
+
+Stream Editor
+sed 's/snow/rain/' forests.txt      substitutes 'snow' for 'rain' in forests.txt, first incidence only
+sed 's/snow/rain/g' forests.txt     substitutes globally, all instances
+
+Bash
+nano ~/.bash_profile
+**in Nano **
+echo "Hello"
+alias p="pwd"
+alias ll="ls -la"
+export USER="my name here"
+export PS1=">> "
+export LESS="-N"  shows line #
+
+echo $PATH
+echo $HOME
+env:  return environmental variables
+env | grep LESS   return the env. variable LESS
+
+bash scripting.
+
+Any command that can be run in the terminal can be run in a bash script.
+Variables are assigned using an equals sign with no space (greeting="hello").
+Variables are accessed using a dollar sign (echo $greeting).
+Conditionals use if, then, else, fi syntax.
+Three types of loops can be used: for, while, and until.
+Bash scripts use a unique set of comparison operators:
+Equal: -eq
+Not equal: -ne
+Less than or equal: -le
+Less than: -lt
+Greater than or equal: -ge
+Greater than: -gt
+Is null: -z
+Input arguments can be passed to a bash script after the script name, separated by spaces (myScript.sh "hello" "how are you").
+Input can be requested from the script user with the read keyword.
+Aliases can be created in the .bashrc or .bash_profile using the alias keyword.
 
 ---
 
